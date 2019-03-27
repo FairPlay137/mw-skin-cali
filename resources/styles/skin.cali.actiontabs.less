@@ -1,0 +1,118 @@
+#article-tabs {
+	position: relative;
+	top: 5px;
+	left: 5px;
+
+	a {
+		color: #7f7968;
+		z-index: 0;
+		&:hover {
+			color: #47443b;
+		}
+	}
+}
+
+#action-bar {
+	position: relative;
+	background-color: #dfd7d4;
+	font-size: 13px;
+	height: 30px;
+	border-radius: .5em .5em 0 0;
+}
+
+.mw-skin-cali-actiontab {
+	border-radius: .5em .5em 0 0;
+	font-size: 13px;
+	margin: 0 3px 0;
+	float: left;
+	line-height: 25px;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	span {
+		padding: 0 10px;
+	}
+
+	&.tab-off img,
+	&.tab-on img {
+		vertical-align: baseline;
+	}
+
+	&.tab-off {
+	background: #f3f0ef;
+
+		&:hover {
+			background: #fff;
+		}
+	}
+
+	&.tab-on {
+		background: #fff;
+	}
+
+	&.more-tab-off {
+		color: #7f7968;
+	}
+
+	&.more-tab-on {
+		color: #47443b;
+	}
+
+	&.more-tab {
+		span {
+			padding: 5px 10px 0 10px;
+			line-height: 14px;
+		}
+	}
+
+}
+
+.tab-new {
+	color: #F15A3A !important;
+}
+
+.article-more-actions {
+	background-color: #fff;
+	border-bottom: 2px solid #f3f0ef;
+	border-left: 1px solid #f3f0ef;
+	border-right: 2px solid #f3f0ef;
+	padding: 0;
+	position: absolute;
+	top: 25px;
+	width: 200px;
+	z-index: 8;
+
+	a {
+		display: block;
+		border-bottom: 1px dashed #f0f1ea;
+		padding: 0 0 0 10px;
+		line-height: 14px;
+		padding: 6px 0 6px 8px;
+	}
+}
+
+#article-controls {
+	float: right;
+	position: relative;
+	padding: 10px 10px 0 0;
+
+	.mw-skin-cali-watchplus {
+		font-weight: bold;
+		font-size: 14px;
+		display: inline-block;
+		margin: .1em;
+		color: #68bd46;
+	}
+
+	a {
+		text-decoration: none;
+		font-size: 11px;
+		color: #68bd46;
+
+		&:hover {
+			color: #466c2c;
+		}
+	}
+}

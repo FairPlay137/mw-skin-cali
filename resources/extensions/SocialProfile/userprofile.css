@@ -1,0 +1,56 @@
+/** User Page **/
+#points-level {
+	margin: 0;
+	left: 10px;
+	border-radius: .5em 0 0 .5em;
+}
+
+#honorific-level {
+	font-size: 11px;
+	text-align: center;
+	float: left;
+	padding: 1px 5px;
+	margin: 0;
+	background-color: #eeaa777f;
+	border-radius: 0 .5em .5em 0;
+}
+
+#profile-toggle-button {
+	top: 0px;
+	border-radius: .35em .35em .35em .35em;
+	box-shadow: 3px 3px 3px #456;
+}
+
+#profile-toggle-button a {
+	text-decoration: none;
+}
+
+#profile-toggle-button a:hover {
+	color: #c07c00;
+}
+
+#profile-title {
+	background-image: linear-gradient(to right, rgba(64,192,256,0.5), rgba(64,192,256,0));
+	padding: .1em .1em .1em .1em;
+}
+
+/** Edit Profile **/
+.profile-tab-bar {
+	padding: 0px;
+}
+
+.profile-update-title {
+	padding: 0px;
+}
+
+.profile-tab-bar {
+	border-bottom: none;
+}
+
+.profile-tab {
+	border: none;
+}
+
+.profile-tab-on {
+	border: none;
+}
