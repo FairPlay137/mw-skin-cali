@@ -428,32 +428,6 @@ class CaliTemplate extends BaseTemplate {
 	}
 
 	/**
-	 * Generate and return "More Wikis" menu, showing links to related wikis.
-	 *
-	 * @return Array: "More Wikis" menu
-	 */
-	private function buildMoreWikis() {
-		$messageKey = 'morewikis';
-		$message = trim( wfMessage( $messageKey )->text() );
-
-		if ( wfMessage( $messageKey )->isDisabled() ) {
-			return array();
-		}
-
-		$lines = array_slice( explode( "\n", $message ), 0, 150 );
-
-		if ( count( $lines ) == 0 ) {
-			return array();
-		}
-
-		foreach ( $lines as $line ) {
-			$moreWikis[] = $this->parseItem( $line );
-		}
-
-		return $moreWikis;
-	}
-
-	/**
 	 * Prints the sidebar menu & all necessary JS
 	 */
 	private function printMenu( $id, $last_count = '', $level = 0 ) {
@@ -827,7 +801,7 @@ class CaliTemplate extends BaseTemplate {
 							) .
 							Linker::link(
 								$title->getTalkPage(),
-								wfMessage( 'talkpage' )->plain(),
+								wfMessage( 'cali-talkpage' )->plain(),
 								array(
 									'class' => 'discuss-action',
 									'title' => Linker::titleAttrib( 'ca-talk', 'withaccess' ),
@@ -836,7 +810,7 @@ class CaliTemplate extends BaseTemplate {
 							) .
 							Linker::link(
 								$title,
-								wfMessage( 'pagehist' )->plain(),
+								wfMessage( 'cali-pagehistory' )->plain(),
 								array(
 									'rel' => 'archives',
 									'class' => 'page-history-action',

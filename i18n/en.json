@@ -12,14 +12,17 @@
 	"cali-featuredimage": "Featured Image",
 	"cali-featureduser": "Featured User",
 	"cali-more-actions": "More...",
-	"cali-pages-can-be-edited": "This page can be edited.<br />\n\nIs this page incomplete? Is there anything wrong?<br />\n\n<b>Change it!</b>",
+	"cali-not-logged-in": "Guest",
+	"cali-pagehistory": "Check this page's history",
+	"cali-pages-can-be-edited": "This page can be <i>edited</i>.<br />\n\nDo you think this page is lacking something? Spotted a mistake somewhere?<br />\n\n<b>Fix it!</b>",
 	"cali-pref-use-midents": "Use Midents for avatars (experimental)",
-	"cali-recent-contributors": "Recent contributors to this page",
-	"cali-recent-contributors-info": "The following people recently contributed to this page.",
+	"cali-recent-contributors": "Recent contributors",
+	"cali-recent-contributors-info": "These people have recently contributed to this page:",
 	"cali-search": "Search $1",
 	"cali-sidebar": "* navigation\n\n** mainpage|mainpage-description\n\n** portal-url|portal\n\n** currentevents-url|currentevents\n\n** recentchanges-url|recentchanges\n\n** randompage-url|randompage\n\n** helppage|help",
 	"cali-specialpages": "{{int:specialpages}}",
 	"cali-specialpages-url": "Special:SpecialPages",
+	"cali-talkpage": "Check the talk page",
 	"cali-tooltip-socialprofile-editprofile": "Edit your profile details",
 	"cali-tooltip-socialprofile-uploadavatar": "Upload a new avatar",
 	"cali-tooltip-socialprofile-mywatchlist": "View your watchlist.",
@@ -31,6 +34,5 @@
 	"cali-tooltip-socialprofile-addasfoe": "Send this user a foe request.",
 	"cali-tooltip-socialprofile-removeasfoe": "Remove this user as a foe.",
 	"cali-tooltip-socialprofile-sendmessage": "Send this user a message.",
-	"cali-tooltip-socialprofile-sendgift": "Send this user a gift.",
-	"cali-not-logged-in": "Guest"
+	"cali-tooltip-socialprofile-sendgift": "Send this user a gift."
 }
