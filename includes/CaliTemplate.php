@@ -80,11 +80,6 @@ class CaliTemplate extends BaseTemplate {
 
 		$user = $this->skin->getUser();
 
-		// This trick copied over from Monaco.php to allow localized central wiki URLs
-		$central_url = !empty( $wgLangToCentralMap[$wgContLang->getCode()] ) ?
-						$wgLangToCentralMap[$wgContLang->getCode()] :
-						'http://wiki.therofl98.co/';
-
 		$register_link = SpecialPage::getTitleFor( 'Userlogin', 'signup' );
 		$login_link = SpecialPage::getTitleFor( 'Userlogin' );
 		$logout_link = SpecialPage::getTitleFor( 'Userlogout' );
@@ -129,7 +124,7 @@ class CaliTemplate extends BaseTemplate {
 ?><div id="container">
 	<header id="header" class="noprint">
 		<div id="tp-logo">
-			<a href="<?php echo $central_url ?>">
+			<a href="<?php echo wfMessage( 'cali-branding-link-url' )->plain() ?>">
 				<img  src="<?php echo $wgStylePath ?>/Cali/resources/img/samlogo.png" alt="" />
 				<span id="tp-logotext"><?php echo wfMessage( 'cali-branding' )->plain() ?></span>
 			</a>
