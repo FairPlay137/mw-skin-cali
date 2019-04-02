@@ -206,17 +206,17 @@ input.search-button {
 }
 
 .menu-item a {
-	color: #0099D9;
+	color: #004999;
 	text-decoration: none;
 }
 
 .menu-item a:visited {
-	color: #0099D9;
+	color: #004999;
 	text-decoration: none;
 }
 
 .menu-item a:hover {
-	color: #01405B;
+	color: #0160b7;
 	text-decoration: none;
 }
 

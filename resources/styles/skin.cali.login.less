@@ -95,16 +95,35 @@ img.userIcon20 {
 	list-style: none none;
 	li {
 		border-top: solid 1px grey;
-		
 		&:hover {
 			background-color: #fcfbf9;
 			background-image: linear-gradient(to right, #fcfbf9, #ecebe9);
 		}
+		&#pt-logout {
+			background-color: #fce9e9;
+			background-image: linear-gradient(to right, #fce9e9, #ecd9d9);
+			&:hover {
+				background-color: #fffbf9;
+				background-image: linear-gradient(to right, #fffbf9, #f4ebe9);
+			}
+		}
+		&#pt-createaccount {
+			background-color: #e9f4ff;
+			background-image: linear-gradient(to right, #e9f4ff, #d9e4ef);
+			&:hover {
+				background-color: #f7faff;
+				background-image: linear-gradient(to right, #f7faff, #e7eaef);
+			}
+		}
 	}
 	li#pt-userpage {
+		background-color: #efefef;
 		background-image:url(/w/skins/Cali/resources/img/icon-user-64x64.png);
 		background-image:url(/w/skins/Cali/resources/img/icon-user.svg);
 		padding-left: 32px;
+		&:hover {
+			background-color: #f7f7f7;
+		}
 	}
 	a {
 		color: black;

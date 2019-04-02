@@ -847,7 +847,6 @@ class CaliTemplate extends BaseTemplate {
 				$footer .= '</div>';
 			}
 		}
-
 		$footer .= '<footer id="footer-bottom" class="noprint">';
 		foreach ( $this->getFooterLinks() as $category => $links ) {
 			foreach ( $links as $link ) {
@@ -855,7 +854,14 @@ class CaliTemplate extends BaseTemplate {
 				$footer .= "\n";
 			}
 		}
-
+		$footer .= '<br />';
+		foreach ( $this->getFooterIcons( 'icononly' ) as $blockName => $footerIcons ) {
+			$footer .= '<div id="' . Sanitizer::escapeIdForAttribute( "f-{$blockName}ico" ) . '" class="footer-icons">';
+			foreach ( $footerIcons as $icon ) {
+				$footer .= $this->getSkin()->makeFooterIcon( $icon );
+			}
+			$footer .= '</div>';
+		}
 		$footer .= "\n\t</footer>\n";
 
 		return $footer;
