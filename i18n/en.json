@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": []
 	},
+	"skinname-cali": "Cali",
 	"cali-desc": "A Nimbus-based skin for the TTSCpedia and other MediaWiki-based TTSC Projects.",
 	"cali-advertise": "Advertise",
 	"cali-advertise-url": "",
@@ -21,6 +22,8 @@
 	"cali-recent-contributors-info": "These people have recently contributed to this page:",
 	"cali-search": "Search $1",
 	"cali-sidebar": "* navigation\n\n** mainpage|mainpage-description\n\n** portal-url|portal\n\n** currentevents-url|currentevents\n\n** recentchanges-url|recentchanges\n\n** randompage-url|randompage\n\n** helppage|help",
+	"cali-socialprofile-blocked-badge": "BLOCKED",
+	"cali-socialprofile-bot-badge": "BOT",
 	"cali-specialpages": "{{int:specialpages}}",
 	"cali-specialpages-url": "Special:SpecialPages",
 	"cali-talkpage": "Check the talk page",

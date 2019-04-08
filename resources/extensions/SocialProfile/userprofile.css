@@ -34,23 +34,3 @@
 	padding: .1em .1em .1em .1em;
 }
 
-/** Edit Profile **/
-.profile-tab-bar {
-	padding: 0px;
-}
-
-.profile-update-title {
-	padding: 0px;
-}
-
-.profile-tab-bar {
-	border-bottom: none;
-}
-
-.profile-tab {
-	border: none;
-}
-
-.profile-tab-on {
-	border: none;
-}
