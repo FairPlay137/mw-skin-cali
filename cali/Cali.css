@@ -293,7 +293,7 @@ input.search-button {
 
 /* Related Articles */
 .read-more-container {
-	margin: 0;
+	margin: 0 !important;
 	position: relative;
     background-color: #f7f9f8;
     border-left: 1px solid #d4dfd7;
