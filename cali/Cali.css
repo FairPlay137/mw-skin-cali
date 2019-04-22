@@ -303,13 +303,13 @@ input.search-button {
 }
 
 .read-more-container h2 {
-	font-size: 16px;
+	font-size: 16px !important;
     color: #687f79;
     margin: 0;
     padding: 0 0 5px 0 !important;
-    border-bottom: none;
-    text-transform: none;
-    letter-spacing: 0;
+    border-bottom: none !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
 }
 
 .read-more-container p {
