@@ -338,7 +338,7 @@ class CaliTemplate extends BaseTemplate {
 		$i = 0;
 		foreach ( $lines as $line ) {
 			# ignore empty lines
-			if ( strlen( $line ) == 0 ) {
+			if ( strlen( $line ) == 0 or substr( $line, 0, 4 ) === "<!--" ) {
 				continue;
 			}
 
