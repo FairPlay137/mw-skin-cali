@@ -158,15 +158,15 @@ class CaliTemplate extends BaseTemplate {
 			</div>
 		</div><!-- #wiki-login -->
 		
-		<div id="universalLanguageSelector">
-			<ul>
-				<?php echo $this->mPersonalToolsLang; ?>
-			</ul>
-		</div>
-		
 		<div id="echoNotifications">
 			<ul>
 				<?php echo $this->mPersonalToolsEcho; ?>
+			</ul>
+		</div>
+		
+		<div id="universalLanguageSelector">
+			<ul>
+				<?php echo $this->mPersonalToolsLang; ?>
 			</ul>
 		</div>
 		
