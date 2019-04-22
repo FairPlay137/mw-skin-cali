@@ -304,7 +304,7 @@ input.search-button {
 
 .read-more-container h2 {
 	font-size: 16px !important;
-    color: #687f79;
+    color: #687f79 !important;
     margin: 0;
     padding: 0 0 5px 0 !important;
     border-bottom: none !important;
