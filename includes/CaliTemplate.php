@@ -34,6 +34,8 @@ class CaliTemplate extends BaseTemplate {
 	private $mPersonalTools = '';
 	/** @var string $mPersonalToolsEcho Saves Echo notifications */
 	private $mPersonalToolsEcho = '';
+	/** @var string $mPersonalToolsLang Saves Universal Language Selector */
+	private $mPersonalToolsLang = '';
 
 	/**
 	 * Should we show the page title (the <h1> HTML element) for the current
@@ -115,8 +117,12 @@ class CaliTemplate extends BaseTemplate {
 				if ( $key === 'notifications-alert' ) {
 					$this->mPersonalToolsEcho .= $this->makeListItem( $key, $item );
 				} else {
-					$this->mPersonalTools .= $this->makeListItem( $key, $item );
-				}	
+					if ( $key === 'uls' ) {
+						$this->mPersonalToolsEcho .= $this->makeListItem( $key, $item );
+					} else {
+						$this->mPersonalTools .= $this->makeListItem( $key, $item );
+					}
+				}
 			}
 		}
 
@@ -151,6 +157,12 @@ class CaliTemplate extends BaseTemplate {
 				</div>
 			</div>
 		</div><!-- #wiki-login -->
+		
+		<div id="universalLanguageSelector">
+			<ul>
+				<?php echo $this->mPersonalToolsLang; ?>
+			</ul>
+		</div>
 		
 		<div id="echoNotifications">
 			<ul>
