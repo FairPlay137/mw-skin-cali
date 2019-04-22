@@ -44,6 +44,9 @@
 				"resources/styles/skin.cali.footer.less": {
 					"media": "screen"
 				},
+				"resources/styles/skin.cali.lang.less": {
+					"media": "screen"
+				},
 				"resources/styles/skin.cali.login.less": {
 					"media": "screen"
 				},
