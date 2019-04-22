@@ -118,7 +118,7 @@ class CaliTemplate extends BaseTemplate {
 					$this->mPersonalToolsEcho .= $this->makeListItem( $key, $item );
 				} else {
 					if ( $key === 'uls' ) {
-						$this->mPersonalToolsEcho .= $this->makeListItem( $key, $item );
+						$this->mPersonalToolsLang .= $this->makeListItem( $key, $item );
 					} else {
 						$this->mPersonalTools .= $this->makeListItem( $key, $item );
 					}
@@ -157,15 +157,16 @@ class CaliTemplate extends BaseTemplate {
 				</div>
 			</div>
 		</div><!-- #wiki-login -->
-		<div id="echoNotifications">
-			<ul>
-				<?php echo $this->mPersonalToolsEcho; ?>
-			</ul>
-		</div>
 		
 		<div id="universalLanguageSelector">
 			<ul>
 				<?php echo $this->mPersonalToolsLang; ?>
+			</ul>
+		</div>
+		
+		<div id="echoNotifications">
+			<ul>
+				<?php echo $this->mPersonalToolsEcho; ?>
 			</ul>
 		</div>
 		
