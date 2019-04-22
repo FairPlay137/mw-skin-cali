@@ -3,23 +3,26 @@
 	top: 0;
 	position: relative;
 	float: right;
-}
-#universalLanguageSelector ul {
-	padding-left: 0.2em !important;
-}
-#universalLanguageSelector ul li {
-	font-size: 1.4em;
-	font-family: sans-serif;
-	height: 35px;
-	a {
-		color: white;
-		text-decoration: none;
-		&:visited {
-			color: white;
+	ul {
+		padding-left: 0.2em !important;
+		li {
+			height: 32px;
+			font-size: 1em !important;
+			font-family: sans-serif;
+			padding: 0.8em 0.3em 0 0.3em !important;
+			a {
+				font-size: 1em !important;
+				font-family: sans-serif;
+				color: white;
+				text-decoration: none;
+				&:visited {
+					color: white;
+				}
+			}
+			&:hover {
+				background: #EF574F;
+				max-height: 35px;
+			}
 		}
-	}
-	&:hover {
-		background: #EF574F;
-		max-height: 35px;
 	}
 }
