@@ -235,15 +235,15 @@ class CaliTemplate extends BaseTemplate {
 				</div>
 			</div>
 			<div id="search-box">
-				<!--<div id="search-title"><?php echo wfMessage( 'cali-search', $GLOBALS['wgSitename'] )->plain() ?></div>-->
 				<form method="get" action="<?php echo $this->text( 'wgScript' ) ?>" name="search_form" id="searchform">
-					<input id="searchInput" type="text" class="search-field" name="search" value="" placeholder="<?php echo wfMessage( 'cali-search', $GLOBALS['wgSitename'] )->plain() ?>" /><br />
+					<input id="searchInput" type="text" class="search-field" name="search" value="" placeholder="<?php echo wfMessage( 'cali-search', $GLOBALS['wgSitename'] )->plain() ?>" /><br /><hr />
 					<input type="submit" class="mw-skin-cali-button positive-button search-button" value="<?php echo wfMessage( 'search' ); ?>" />
 				</form>
 				<div class="cleared"></div>
-				<div class="bottom-left-nav">
+			</div>
+			<div class="bottom-left-nav">
 				<?php
-				// Hook point for ShoutWikiAds
+				// Hook point for 
 				Hooks::run( 'CaliLeftSide' );
 
 				if ( class_exists( 'RandomGameUnit' ) ) {
@@ -275,7 +275,6 @@ class CaliTemplate extends BaseTemplate {
 							$this->get( 'cali-randomfeatureduser' ) . '</div>';
 					}
 				?>
-	</div>
 			</div>
 		</aside>
 		<div id="body-container">

@@ -158,7 +158,16 @@ div.noarticletext {
 
 #search-box {
 	margin: 0px 0px 5px 0px;
-	padding: 0px 0px 0px 5px;
+	padding: 8px;
+	border: 0;
+	background-color: #e5eaf2;
+	border-radius: 10px;
+	height: auto;
+	align-content: center;
+}
+
+#search-box hr {
+	margin: 0.4em 0 0.1em 0;
 }
 
 #search-title {
@@ -169,25 +178,24 @@ div.noarticletext {
 
 input.search-field {
 	float: left;
-	width: 145px;
 	height: 22px;
-	border: 1px solid #D4DFD7;
 	color: #687F79;
-	padding: 2px 0px 0px 3px;
-	margin: 0px 0px 0px 0px;
-}
-
-#searchInput {
-	
+	margin: 0;
+	font-size: 95%;
+	height: 1em;
+	width: 178px;
+	border: #aaa solid 1px;
+	padding: 2px;
+	border-radius: 2px;
 }
 
 input.search-button {
-	float: left;
+	float: right;
 }
 
 /* Make the search suggestions readable, the default font size is too small */
 .suggestions {
-	font-size: 127% !important;
+	font-size: 100% !important;
 }
 
 /** MENU **/

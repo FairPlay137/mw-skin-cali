@@ -59,13 +59,11 @@
 				"resources/styles/skin.cali.hacks.ttsc.less": {
 					"media": "screen"
 				},
-				"resources/styles/skin.cali.hacks.ve.less": {
-					"media": "screen"
-				},
 				"resources/styles/skin.cali.extras.less": {
 					"media": "screen"
 				}
 			}
+			"scripts": "cali/Cali.js"
 		},
 		"skins.cali.menu": {
 			"scripts": "cali/Menu.js"
