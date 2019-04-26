@@ -62,8 +62,7 @@
 				"resources/styles/skin.cali.extras.less": {
 					"media": "screen"
 				}
-			},
-			"scripts": "cali/Cali.js"
+			}
 		},
 		"skins.cali.menu": {
 			"scripts": "cali/Menu.js"
