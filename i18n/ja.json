@@ -2,6 +2,9 @@
 	"@metadata": {
 		"authors": []
 	},
+	"cali-desc": "TTSCpediaおよび他のMediaWikiベースのTTSCプロジェクト用の、Nimbusベースの軽量スキン。",
+	"cali-advertise": "宣伝します",
+	"cali-back-to-top": "先頭へ戻る",
 	"cali-branding": "TTSコミュニティ",
 	"cali-contribute": "貢献",
 	"cali-didyouknow": "知ってますか？",
@@ -16,6 +19,19 @@
 	"cali-recent-contributors": "最近の貢献者",
 	"cali-recent-contributors-info": "これらの人々は最近、このページに貢献してきました：",
 	"cali-search": "$1を検索",
+	"cali-socialprofile-blocked-badge": "BLOCKED",
 	"cali-socialprofile-bot-badge": "ボット",
-	"cali-talkpage": "ディスカッションページを見てください"
+	"cali-talkpage": "ディスカッションページを見てください",
+	"cali-tooltip-socialprofile-editprofile": "プロフィールの詳細を編集する",
+	"cali-tooltip-socialprofile-uploadavatar": "新しいアバターをアップロードする",
+	"cali-tooltip-socialprofile-mywatchlist": "ウォッチリストを見る",
+	"cali-tooltip-socialprofile-contributions": "このウィキへの投稿を見る",
+	"cali-tooltip-socialprofile-userpage": "このユーザーのウィキユーザーページを見る",
+	"cali-tooltip-socialprofile-socialprofile": "このユーザーのプロフィールページを見る",
+	"cali-tooltip-socialprofile-addasfriend": "このユーザーに友達リクエストを送る",
+	"cali-tooltip-socialprofile-removeasfriend": "このユーザーを友達にしない",
+	"cali-tooltip-socialprofile-addasfoe": "このユーザーに敵リクエストを送ります",
+	"cali-tooltip-socialprofile-removeasfoe": "敵としてこのユーザーを削除します",
+	"cali-tooltip-socialprofile-sendmessage": "このユーザーにメッセージを送ります",
+	"cali-tooltip-socialprofile-sendgift": "このユーザーにギフトを送ります"
 }

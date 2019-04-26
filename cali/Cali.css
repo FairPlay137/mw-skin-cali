@@ -170,6 +170,12 @@ div.noarticletext {
 	margin: 0.4em 0 0.1em 0;
 }
 
+#search-box label {
+	font-size: x-small;
+	font-stretch: condensed;
+	color: #858a92;
+}
+
 #search-title {
 	color: #333;
 	font-size: 14px;
