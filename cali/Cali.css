@@ -189,6 +189,10 @@ input.search-field {
 	border-radius: 2px;
 }
 
+input.go-button {
+	float: right;
+}
+
 input.search-button {
 	float: right;
 }
