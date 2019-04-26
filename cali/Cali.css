@@ -183,7 +183,7 @@ input.search-field {
 	margin: 0;
 	font-size: 95%;
 	height: 1em;
-	width: 178px;
+	width: 178px !important;
 	border: #aaa solid 1px;
 	padding: 2px;
 	border-radius: 2px;
