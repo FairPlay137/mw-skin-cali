@@ -237,7 +237,8 @@ class CaliTemplate extends BaseTemplate {
 			<div id="search-box">
 				<form method="get" action="<?php echo $this->text( 'wgScript' ) ?>" name="search_form" id="searchform">
 					<input id="searchInput" type="text" class="search-field" name="search" value="" placeholder="<?php echo wfMessage( 'cali-search', $GLOBALS['wgSitename'] )->plain() ?>" /><br /><hr />
-					<input type="submit" class="mw-skin-cali-button positive-button search-button" value="<?php echo wfMessage( 'search' ); ?>" />
+					<input type="submit" name="fulltext" class="mw-skin-cali-button negative-button search-button" value="<?php echo wfMessage( 'search' ); ?>" />
+					<input type="submit" name="go" class="mw-skin-cali-button positive-button search-button" value="<?php echo wfMessage( 'go' ); ?>" />
 				</form>
 				<div class="cleared"></div>
 			</div>
