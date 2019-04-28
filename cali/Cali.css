@@ -302,11 +302,9 @@ input.search-button {
 	margin: 0px 0px 0px 3px;
 }
 
-/* Hack for making font size bigger */
 .mediawiki {
 	background: #f9f9f9 url(/w/skins/Cali/resources/img/headbg2.png) 0 0 no-repeat;
 	background: linear-gradient(transparent,transparent),url(/w/skins/Cali/resources/img/headbg2.svg) 0 0 repeat-x;
-	font-size: small;
 }
 
 /* Related Articles */

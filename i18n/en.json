@@ -3,7 +3,7 @@
 		"authors": [ "FairPlay137" ]
 	},
 	"skinname-cali": "Cali",
-	"cali-desc": "A Nimbus-based, lightweight skin for the TTSCpedia and other MediaWiki-based TTSC Projects.",
+	"cali-desc": "A Nimbus-based skin for the TTSCpedia and other MediaWiki-based TTSC Projects.",
 	"cali-advertise": "Advertise",
 	"cali-advertise-url": "",
 	"cali-back-to-top": "Back to top",
@@ -22,6 +22,9 @@
 	"cali-recent-contributors": "Recent contributors",
 	"cali-recent-contributors-info": "These people have recently contributed to this page:",
 	"cali-search": "Search $1...",
+	"cali-search-label-advancedsearch-link": "Advanced...",
+	"cali-search-label-cirrussearch": "Powered by ElasticSearch",
+	"cali-search-label-generic": "",
 	"cali-sidebar": "* navigation\n\n** mainpage|mainpage-description\n\n** portal-url|portal\n\n** currentevents-url|currentevents\n\n** recentchanges-url|recentchanges\n\n** randompage-url|randompage\n\n** helppage|help",
 	"cali-socialprofile-blocked-badge": "BLOCKED",
 	"cali-socialprofile-bot-badge": "BOT",

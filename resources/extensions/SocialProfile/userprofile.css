@@ -33,3 +33,44 @@
 	background-image: linear-gradient(to right, rgba(64,192,256,0.5), rgba(64,192,256,0));
 	padding: .1em .1em .1em .1em;
 }
+
+/* title colors */
+#profile-tcolor1 {
+	/* red */
+	background-image: linear-gradient(to right, rgba(256,96,64,0.5), rgba(256,96,64,0));
+}
+
+#profile-tcolor2 {
+	/* green */
+	background-image: linear-gradient(to right, rgba(128,256,64,0.5), rgba(128,256,64,0));
+}
+
+#profile-tcolor3 {
+	/* blue */
+	background-image: linear-gradient(to right, rgba(64,96,256,0.5), rgba(64,96,256,0));
+}
+
+#profile-tcolor4 {
+	/* yellow */
+	background-image: linear-gradient(to right, rgba(256,228,16,0.5), rgba(256,228,16,0));
+}
+
+#profile-tcolor5 {
+	/* teal */
+	background-image: linear-gradient(to right, rgba(16,228,256,0.5), rgba(16,228,256,0));
+}
+
+#profile-tcolor6 {
+	/* pink */
+	background-image: linear-gradient(to right, rgba(228,16,256,0.5), rgba(228,16,256,0));
+}
+
+#profile-tcolor7 {
+	/* silver */
+	background-image: linear-gradient(to right, rgba(168,176,184,0.5), rgba(168,176,184,0));
+}
+
+#profile-tcolor8 {
+	/* brown */
+	background-image: linear-gradient(to right, rgba(64,16,4,0.5), rgba(64,16,4,0));
+}

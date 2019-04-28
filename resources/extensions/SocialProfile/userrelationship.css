@@ -1,3 +1,17 @@
 .relationship-action {
 	margin: 15px 0;
+	background-color: #eaecef;
+	padding: 1em;
+	border-radius: 8px;
+}
+
+.relationship-action .relationship-buttons input.site-button {
+	border: 0;
+	border-radius: 1.25em;
+	color: #fff;
+	background: #489d26;
+	font-size: 12px;
+	cursor: pointer;
+	padding: .5em 1em;
+	box-shadow: 2px 2px 3px #456;
 }

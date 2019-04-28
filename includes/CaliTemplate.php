@@ -239,13 +239,13 @@ class CaliTemplate extends BaseTemplate {
 					<input id="searchInput" type="text" class="search-field" name="search" value="" placeholder="<?php echo wfMessage( 'cali-search', $GLOBALS['wgSitename'] )->plain() ?>" /><br /><hr />
 					<input type="submit" name="go" class="mw-skin-cali-button positive-button go-button" value="<?php echo wfMessage( 'go' ); ?>" />
 					<input type="submit" name="fulltext" class="mw-skin-cali-button negative-button search-button" value="<?php echo wfMessage( 'search' ); ?>" />
-					
+					<label><?php echo wfMessage( 'cali-search-label' )->plain() ?></label>
 				</form>
 				<div class="cleared"></div>
 			</div>
 			<div class="bottom-left-nav">
 				<?php
-				// Hook point for 
+				// Hook point for TTSCpediaChat and possibly ads
 				Hooks::run( 'CaliLeftSide' );
 
 				if ( class_exists( 'RandomGameUnit' ) ) {
