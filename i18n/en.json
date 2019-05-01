@@ -22,6 +22,7 @@
 	"cali-recent-contributors": "Recent contributors",
 	"cali-recent-contributors-info": "These people have recently contributed to this page:",
 	"cali-search": "Search $1...",
+	"cali-search-label": "",
 	"cali-search-label-advancedsearch-link": "Advanced...",
 	"cali-search-label-cirrussearch": "Powered by ElasticSearch",
 	"cali-search-label-generic": "",
