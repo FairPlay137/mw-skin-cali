@@ -364,8 +364,3 @@ input.search-button {
 	   	width: 49%;
 	}
 }
-
-.mw-echo-ui-overlay,
-.ve-ui-overlay {
-	font-size: small !important;
-}
