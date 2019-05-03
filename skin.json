@@ -56,7 +56,7 @@
 				"resources/styles/skin.cali.hacks.clear.less": {
 					"media": "screen"
 				},
-				"resources/styles/skin.cali.hacks.ttsc.less": {
+				"resources/styles/skin.cali.header.less": {
 					"media": "screen"
 				},
 				"resources/styles/skin.cali.extras.less": {

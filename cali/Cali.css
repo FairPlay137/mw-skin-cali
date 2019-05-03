@@ -97,6 +97,11 @@ div.noarticletext {
 	z-index: 10;
 }
 
+.oo-ui-windowManager-modal-active #header {
+	opacity: 0.5;
+	top: -30px !important;
+}
+
 /** Site Header **/
 #site-header {
 	position: relative;
@@ -360,6 +365,7 @@ input.search-button {
 	}
 }
 
-.mw-echo-ui-overlay {
+.mw-echo-ui-overlay,
+.ve-ui-overlay {
 	font-size: small !important;
 }
