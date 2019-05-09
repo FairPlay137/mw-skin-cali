@@ -245,7 +245,7 @@ class CaliTemplate extends BaseTemplate {
 			</div>
 			<div class="bottom-left-nav">
 				<?php
-				// Hook point for TTSCpediaChat and possibly ads
+				// Hook point for TTSCWikiChat and possibly ads
 				Hooks::run( 'CaliLeftSide' );
 
 				if ( class_exists( 'RandomGameUnit' ) ) {
@@ -280,11 +280,12 @@ class CaliTemplate extends BaseTemplate {
 			</div>
 		</aside>
 		<div id="body-container">
-			<?php if ( $this->data['sitenotice'] ) { ?><div id="siteNotice"><?php $this->html( 'sitenotice' ) ?></div><?php } ?>
+			<?php if ( $this->data['sitenotice'] and $this->config->get( 'CaliSiteNoticeOutsideArticle' )) { ?><div id="siteNotice"><?php $this->html( 'sitenotice' ) ?></div><?php } ?>
 			<?php echo $this->actionBar(); echo "\n"; ?>
 			<div id="article">
 				<div id="content">
 					<main id="article-body" class="mw-body-content">
+						<?php if ( $this->data['sitenotice'] and !($this->config->get( 'CaliSiteNoticeOutsideArticle' ))) { ?><div id="siteNotice"><?php $this->html( 'sitenotice' ) ?></div><?php } ?>
 						<div id="article-text" class="clearfix">
 							<?php echo $this->getIndicators(); ?>
 							<?php if ( $this->showPageTitle() ) { ?><h1 class="pagetitle"><?php $this->html( 'title' ) ?></h1><?php } ?>

@@ -7,6 +7,12 @@
 	"license-name": "GPL-2.0-or-later",
 	"descriptionmsg": "cali-desc",
 	"type": "skin",
+	"DefaultUserOptions": {
+		"skincali-altsitenoticelocation": 0
+	},
+	"ConfigRegistry": {
+		"cali": "GlobalVarConfig::newInstance"
+	},
 	"ValidSkinNames": {
 		"cali": "Cali"
 	},
@@ -86,6 +92,11 @@
 			"+mediawiki.special.preferences.styles": "resources/mediawiki/special.preferences.styles.less",
 			"+oojs-ui-core.styles": "resources/ooui.less"
 		}
+	},
+	"config": {
+		"CaliShowHeaderBranding": true,
+		"CaliShowHeaderTabs": true,
+		"CaliSiteNoticeOutsideArticle": true
 	},
 	"manifest_version": 1
 }

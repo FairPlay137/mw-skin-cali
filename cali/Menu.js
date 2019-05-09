@@ -341,7 +341,7 @@ $( function() {
 		}
 	} );
 
-	$( '#more-tab' ).on( 'mouseover', function() {
+	/*$( '#more-tab' ).on( 'mouseover', function() {
 		CaliSkin.show_actions( 'article-more-container', 'show' );
 	} ).on( 'mouseout', function() {
 		CaliSkin.delay_hide( 'article-more-container' );
@@ -360,7 +360,7 @@ $( function() {
 
 	$( 'body' ).on( 'click', function () {
 		CaliSkin.show_more_category( 'more-wikis-menu', false );
-	} );
+	} );*/
 } );
 
 }( jQuery ) );

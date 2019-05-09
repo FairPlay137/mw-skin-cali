@@ -43,5 +43,6 @@
 	"cali-tooltip-socialprofile-addasfoe": "Send this user a foe request.",
 	"cali-tooltip-socialprofile-removeasfoe": "Remove this user as a foe.",
 	"cali-tooltip-socialprofile-sendmessage": "Send this user a message.",
-	"cali-tooltip-socialprofile-sendgift": "Send this user a gift."
+	"cali-tooltip-socialprofile-sendgift": "Send this user a gift.",
+	"skincali-altsitenoticelocation-preference": "Use alternative site notice location (Cali)"
 }
