@@ -368,6 +368,6 @@ input.search-button {
 	}
 }
 
-.ve-init-mw-desktopArticleTarget .CodeMirror {
-	padding: 0;
+.CodeMirror {
+	padding: 0 !important;
 }
