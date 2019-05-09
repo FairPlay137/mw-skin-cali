@@ -367,3 +367,7 @@ input.search-button {
 	   	width: 49%;
 	}
 }
+
+.ve-init-mw-desktopArticleTarget .CodeMirror {
+	padding: 0;
+}
