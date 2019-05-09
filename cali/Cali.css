@@ -368,6 +368,6 @@ input.search-button {
 	}
 }
 
-.ve-init-mw-desktopArticleTarget .cm-s-default {
-	padding: 0 !important;
+.ve-ui-mwWikitextSurface .ve-ce-attachedRootNode {
+	padding: 1.5em !important;
 }
