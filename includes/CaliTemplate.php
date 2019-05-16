@@ -192,6 +192,8 @@ class CaliTemplate extends BaseTemplate {
 				<div id="other-links-container">
 					<div id="other-links">
 					<?php
+						
+						
 						// Only show the link to Special:TopUsers if wAvatar class exists and $wgUserLevels is an array
 						if ( class_exists( 'wAvatar' ) && is_array( $wgUserLevels ) ) {
 							echo '<a href="' . htmlspecialchars( $top_fans_link->getFullURL() ) . '">' . wfMessage( 'topusers' )->plain() . '</a>';
@@ -759,7 +761,7 @@ class CaliTemplate extends BaseTemplate {
 			$data = $wgMemc->get( $key );
 			$editors = array();
 			if ( !$data ) {
-				wfDebug( __METHOD__ . ": Loading recent editors for page {$pageTitleId} from DB\n" );
+				wfDebug( __METHOD__ . ": Loading recent editors for page {$pageTitleId} from wiki database...\n" );
 				$dbw = wfGetDB( DB_MASTER );
 				$res = $dbw->select(
 					'revision',
@@ -787,7 +789,7 @@ class CaliTemplate extends BaseTemplate {
 				// Cache in memcached for five minutes
 				$wgMemc->set( $key, $editors, 60 * 5 );
 			} else {
-				wfDebug( __METHOD__ . ": Loading recent editors for page {$pageTitleId} from cache\n" );
+				wfDebug( __METHOD__ . ": Loading recent editors for page {$pageTitleId} from cache...\n" );
 				$editors = $data;
 			}
 

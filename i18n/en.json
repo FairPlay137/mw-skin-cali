@@ -10,6 +10,7 @@
 	"cali-branding": "The TTS Community",
 	"cali-branding-link-url": "https://wiki.therofl98.co/",
 	"cali-contribute": "Contribute",
+	"cali-createpageuw": "Create page...",
 	"cali-didyouknow": "Did you know?",
 	"cali-editthispage": "Edit this page",
 	"cali-featuredarticle": "Featured Article",
@@ -44,5 +45,6 @@
 	"cali-tooltip-socialprofile-removeasfoe": "Remove this user as a foe.",
 	"cali-tooltip-socialprofile-sendmessage": "Send this user a message.",
 	"cali-tooltip-socialprofile-sendgift": "Send this user a gift.",
+	"cali-uploadfiles": "Upload file(s)...",
 	"skincali-altsitenoticelocation-preference": "Use alternative site notice location (Cali)"
 }
