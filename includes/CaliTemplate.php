@@ -999,7 +999,7 @@ class CaliTemplate extends BaseTemplate {
 			'img',
 			[
 				'class' => 'userIcon' . (int)$width,
-				'src' => htmlspecialchars( $skin->getSkinStylePath( 'resources/img/user-icon-default.svg' ) ),
+				'src' => htmlspecialchars( '/w/skins/Cali/resources/img/user-icon-default.svg' ),
 				'alt' => ''
 			]
 		);
