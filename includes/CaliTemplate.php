@@ -192,7 +192,7 @@ class CaliTemplate extends BaseTemplate {
 				<div id="other-links-container">
 					<div id="other-links">
 					<?php
-						
+						// TODO: Add optional Upload File(s) link and Create Page link (CreatePageUw)
 						
 						// Only show the link to Special:TopUsers if wAvatar class exists and $wgUserLevels is an array
 						if ( class_exists( 'wAvatar' ) && is_array( $wgUserLevels ) ) {
@@ -247,7 +247,7 @@ class CaliTemplate extends BaseTemplate {
 			</div>
 			<div class="bottom-left-nav">
 				<?php
-				// Hook point for TTSCWikiChat and possibly ads
+				// Hook point for TTSCWikiChat (also could be used for an ad engine? We have no plans to implement ads into the official TTSC Wikis, but the engine could be used for other wikis.)
 				Hooks::run( 'CaliLeftSide' );
 
 				if ( class_exists( 'RandomGameUnit' ) ) {
@@ -947,7 +947,7 @@ class CaliTemplate extends BaseTemplate {
 			'img',
 			[
 				'class' => 'userIcon' . (int)$width,
-				'src' => htmlspecialchars( $skin->getSkinStylePath( 'images/Transparent.gif' ) ),
+				'src' => htmlspecialchars( $skin->getSkinStylePath( 'resources/img/user-icon-default.svg' ) ),
 				'alt' => ''
 			]
 		);
