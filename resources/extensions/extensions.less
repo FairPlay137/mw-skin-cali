@@ -51,6 +51,11 @@
 					a.comments-block-user {
 						background-image: none;
 						padding: 0;
+						position: relative;
+						bottom: 0.1em;
+					}
+					img {
+						width: 16px;
 					}
 				}
 				.c-user-level {
@@ -114,18 +119,23 @@
 			width: 530px;
 			border-radius: 0.25em;
 		}
-		.c-form-button input {
-			border: 0;
-			border-radius: 1.25em;
-			color: #fff;
-			background-color: #489d26;
-			font-size: 12px;
-			cursor: pointer;
-			padding: .5em 1em;
-			box-shadow: 2px 2px 3px #456;
-			&:hover {
-				background-color: #68bd46;
+		.c-form-button {
+			padding: 4px 0px 1em;
+			input {
+				border: 0;
+				border-radius: 1em;
+				color: #fff;
+				background-color: #489d26;
+				font-size: 12px;
+				cursor: pointer;
+				padding: .25em .75em;
+				box-shadow: 2px 2px 3px #456;
+				float: right;
+				&:hover {
+					background-color: #68bd46;
+				}
 			}
+
 		}
 	}
 }
