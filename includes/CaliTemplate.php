@@ -1,19 +1,16 @@
 <?php
 /**
+ * Cali is based off of the Nimbus skin. As such, there may still be remnants of ShoutWiki stuff in the code.
+ * These remnants will be either repurposed or removed.
+ * 
  * Notes:
  * Template:Didyouknow is a part of the interface (=should be fully protected on the wiki)
  * If SocialProfile extension (+some other social extensions) is available,
- * then more stuff will appear in the skin interface
+ * then more stuff will appear in the skin interface.
  *
- * Feel free to improve source code documentation as you like,
- * it's in a really crappy state currently, but better than nothing.
- *
- * @file
- * @author Aaron Wright <aaron.wright@gmail.com>
- * @author David Pean <david.pean@gmail.com>
- * @author Inez Korczyński <korczynski@gmail.com>
- * @author Jack Phoenix
- * @copyright Copyright © 2008-2019 Aaron Wright, David Pean, Inez Korczyński, Jack Phoenix
+ * @file 
+ * @author FairPlay137
+ * @copyright Copyright © 2019
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
 if ( !defined( 'MEDIAWIKI' ) ) {
@@ -108,6 +105,8 @@ class CaliTemplate extends BaseTemplate {
 			$userNameTop = $skin->msg( 'cali-not-logged-in' )->text();
 		}
 		
+		$more_wikis = $this->buildMoreWikis();
+		
 		$personalTools = $this->getPersonalTools();
 		
 		foreach ( $personalTools as $key => $item ) {
@@ -135,6 +134,28 @@ class CaliTemplate extends BaseTemplate {
 				<span id="tp-logotext"><?php echo wfMessage( 'cali-branding' )->plain() ?></span>
 			</a>
 		</div>
+		<?php if ( $more_wikis ) { ?>
+		<div id="tp-more-category">
+			<div class="mw-skin-cali-button more-wikis-button"><span><?php echo wfMessage( 'cali-more-wikis' )->plain() ?></span></div>
+		</div>
+		<div id="more-wikis-menu" style="display:none;">
+		<?php
+		$x = 1;
+		foreach ( $more_wikis as $link ) {
+			$ourClass = '';
+			if ( $x == count( $more_wikis ) ) {
+				$ourClass = ' class="border-fix"';
+			}
+			echo "<a href=\"{$link['href']}\"" . $ourClass .
+				">{$link['text']}</a>\n";
+			if ( $x > 1 && $x % 2 == 0 ) {
+				echo '<div class="cleared"></div>' . "\n";
+			}
+			$x++;
+		}
+		?>
+		</div><!-- #more-wikis-menu -->
+		<?php } // if $more_wikis ?>
 		<div id="wiki-login">
 			<div class="user-icon-container user-dmenu">
 				<span id="username-top">
@@ -245,22 +266,26 @@ class CaliTemplate extends BaseTemplate {
 				</form>
 				<div class="cleared"></div>
 			</div>
-			<div class="bottom-left-nav">
-				<?php
-				// Hook point for TTSCWikiChat (also could be used for an ad engine? We have no plans to implement ads into the official TTSC Wikis, but the engine could be used for other wikis.)
-				Hooks::run( 'CaliLeftSide' );
+				<div class="bottom-left-nav">
+					<?php
+					// Hook point for TTSCWikiChat (also could be used for an ad engine? We have no plans to implement ads into the official TTSC Wikis, but the engine could be used for other wikis.)
+					Hooks::run( 'CaliLeftSide' );
 
-				if ( class_exists( 'RandomGameUnit' ) ) {
-					// @note The CSS for this is loaded in SkinCali::prepareQuickTemplate();
-					// it *cannot* be loaded here!
-					echo RandomGameUnit::getRandomGameUnit();
-				}
-				?>
-					<div class="bottom-left-nav-container">
-						<h2><?php echo wfMessage( 'cali-didyouknow' )->plain() ?></h2>
-						<?php echo $wgOut->parse( '{{Didyouknow}}' ) ?>
-					</div>
-				<?php
+					if ( class_exists( 'RandomGameUnit' ) ) {
+						// @note The CSS for this is loaded in SkinCali::prepareQuickTemplate();
+						// it *cannot* be loaded here!
+						echo RandomGameUnit::getRandomGameUnit();
+					}
+					$dykTemplate = Title::makeTitle( NS_TEMPLATE, 'Didyouknow' );
+					if ( $dykTemplate->exists() ) {
+					?>
+						<div class="bottom-left-nav-container">
+							<h2><?php echo wfMessage( 'cali-didyouknow' )->plain() ?></h2>
+							<?php echo $wgOut->parse( '{{Didyouknow}}' ) ?>
+						</div>
+					<?php
+					}
+					
 					echo $this->getInterlanguageLinksBox();
 
 					if ( class_exists( 'RandomImageByCategory' ) ) {
@@ -438,6 +463,33 @@ class CaliTemplate extends BaseTemplate {
 			'href' => $href
 		);
 	}
+
+	/**
+	 * Generate and return "More Wikis" menu, showing links to related wikis.
+	 *
+	 * @return Array: "More Wikis" menu
+	 */
+	private function buildMoreWikis() {
+		$messageKey = 'cali-morewikis';
+		$message = trim( wfMessage( $messageKey )->text() );
+
+		if ( wfMessage( $messageKey )->isDisabled() ) {
+			return array();
+		}
+
+		$lines = array_slice( explode( "\n", $message ), 0, 150 );
+
+		if ( count( $lines ) == 0 ) {
+			return array();
+		}
+
+		foreach ( $lines as $line ) {
+			$moreWikis[] = $this->parseItem( $line );
+		}
+
+		return $moreWikis;
+	}
+
 
 	/**
 	 * Prints the sidebar menu & all necessary JS
