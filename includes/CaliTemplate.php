@@ -999,6 +999,8 @@ class CaliTemplate extends BaseTemplate {
 			'img',
 			[
 				'class' => 'userIcon' . (int)$width,
+				'width' => (int)$width,
+				'height' => (int)$width,
 				'src' => htmlspecialchars( '/w/skins/Cali/resources/img/user-icon-default.svg' ),
 				'alt' => ''
 			]
