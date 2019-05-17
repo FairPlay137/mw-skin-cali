@@ -3,6 +3,8 @@
 	margin: 0;
 	left: 10px;
 	border-radius: .5em 0 0 .5em;
+	position: relative;
+	top: .5em;
 }
 
 #honorific-level {
@@ -13,6 +15,21 @@
 	margin: 0;
 	background-color: #eeaa777f;
 	border-radius: 0 .5em .5em 0;
+	position: relative;
+	top: .5em;
+}
+
+.profile-actions {
+	color: #0000;
+	padding-top: 0.5em;
+}
+
+.profile-actions a {
+	border-radius: .35em;
+	box-shadow: 3px 3px 3px #4567;
+	background-color: #6b0;
+	padding: .2em .5em;
+	color: #fff;
 }
 
 #profile-toggle-button {
