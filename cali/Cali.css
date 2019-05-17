@@ -142,8 +142,6 @@ div.noarticletext {
 	background-color :#FFF;
 	line-height: 1.5em;
 	width: 100%;
-	z-index: -1;
-	box-shadow: 4px 4px 3px #1114;
 }
 
 #article-body {
