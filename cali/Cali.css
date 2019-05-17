@@ -137,15 +137,13 @@ div.noarticletext {
 	top: 0px;
 }
 
-#article {
-	box-shadow: 2px 2px 5px #1117;
-}
-
 #content {
 	font-family: sans-serif;
 	background-color :#FFF;
 	line-height: 1.5em;
 	width: 100%;
+	z-index: -1;
+	box-shadow: 4px 4px 3px #1114;
 }
 
 #article-body {
