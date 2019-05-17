@@ -353,7 +353,7 @@ $( function() {
 		CaliSkin.show_actions( 'article-more-container', 'hide' );
 	} );
 
-	$( '#sw-more-category' ).on( 'click', function( e ) {
+	$( '#tp-more-category' ).on( 'click', function( e ) {
 		CaliSkin.show_more_category( 'more-wikis-menu' );
 		e.stopPropagation();
 	} );

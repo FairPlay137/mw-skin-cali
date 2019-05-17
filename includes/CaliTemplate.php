@@ -283,11 +283,11 @@ class CaliTemplate extends BaseTemplate {
 		</aside>
 		<div id="body-container">
 			<?php if ( $this->data['sitenotice'] and $this->config->get( 'CaliSiteNoticeOutsideArticle' )) { ?><div id="siteNotice"><?php $this->html( 'sitenotice' ) ?></div><?php } ?>
-			<?php echo $this->actionBar(); echo "\n"; ?>
 			<div id="article">
+				<?php echo $this->actionBar(); echo "\n"; ?>
 				<div id="content">
 					<main id="article-body" class="mw-body-content">
-						<?php if ( $this->data['sitenotice'] and !($this->config->get( 'CaliSiteNoticeOutsideArticle' ))) { ?><div id="siteNotice"><?php $this->html( 'sitenotice' ) ?></div><?php } ?>
+						<?php if ( $this->data['sitenotice'] and !($this->config->get( 'CaliSiteNoticeOutsideArticle' ))) { ?><div id="siteNotice" style="padding: 0.8em !important"><?php $this->html( 'sitenotice' ) ?></div><?php } ?>
 						<div id="article-text" class="clearfix">
 							<?php echo $this->getIndicators(); ?>
 							<?php if ( $this->showPageTitle() ) { ?><h1 class="pagetitle"><?php $this->html( 'title' ) ?></h1><?php } ?>

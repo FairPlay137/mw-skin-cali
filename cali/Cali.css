@@ -63,7 +63,7 @@ div.noarticletext {
 }
 
 /** Buttons **/
-/*#more-wikis-menu {
+#more-wikis-menu {
 	background-color: #FFF;
 	border-bottom: 1px solid #D4DFD7;
 	border-left: 1px solid #D4DFD7;
@@ -84,7 +84,7 @@ div.noarticletext {
 	width: 144px;
 	color: #0099D9;
 	line-height: 20px;
-}*/
+}
 
 #main-body {
 	padding-top: 35px;
@@ -138,6 +138,10 @@ div.noarticletext {
 }
 
 #article {
+	box-shadow: 2px 2px 5px #1117;
+}
+
+#content {
 	font-family: sans-serif;
 	background-color :#FFF;
 	line-height: 1.5em;
@@ -172,6 +176,7 @@ div.noarticletext {
 	border-radius: 10px;
 	height: auto;
 	align-content: center;
+	box-shadow: 2px 2px 5px #1117;
 }
 
 #search-box hr {
