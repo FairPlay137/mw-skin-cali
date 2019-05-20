@@ -126,7 +126,9 @@ var CaliSkin = {
 
 	do_menuItemAction: function( item ) {
 		if ( document.getElementById( 'sub-menu' + item ) ) {
-			CaliSkin.submenu_3danim(document.getElementById( 'sub-menu' + item ));
+			if(document.getElementById( 'sub-menu' + item ).style.display != 'block') {
+				CaliSkin.submenu_3danim(document.getElementById( 'sub-menu' + item ));
+			}
 			document.getElementById( 'sub-menu' + item ).style.display = 'block';
 			CaliSkin.displayed_menus.push( 'sub-menu' + item );
 			CaliSkin.last_displayed = 'sub-menu' + item;
@@ -311,7 +313,7 @@ var CaliSkin = {
 			opac = 1+(rot/90);
 			if (rot == 0) {
 				clearInterval(id);
-				elem.style.opacity = 100;
+				elem.style.opacity = '';
 				elem.style.transform = '';
 			} else {
 				rot += 2; 
