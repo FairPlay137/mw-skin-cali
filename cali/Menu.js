@@ -299,17 +299,23 @@ var CaliSkin = {
 	},
 	
 	submenu_3danim: function( elem ) { 
-		var rot = 90;
-		var zofforig = -64;
+		var rot = -90;
+		var zofforig = -55;
 		var zoff = zofforig*(rot/90);
+		var opac = 1+(rot/90);
+		elem.style.opacity = opac;
+		elem.style.transform = 'rotateY('+rot.toString()+'deg) translateZ('+zoff.toString()+'px)';
 		var id = setInterval(frame, 5);
 		function frame() {
 			zoff = zofforig*(rot/90);
+			opac = 1+(rot/90);
 			if (rot == 0) {
 				clearInterval(id);
+				elem.style.opacity = 100;
 				elem.style.transform = '';
 			} else {
-				rot -= 2; 
+				rot += 2; 
+				elem.style.opacity = opac;
 				elem.style.transform = 'rotateY('+rot.toString()+'deg) translateZ('+zoff.toString()+'px)';
 			}
 		}

@@ -233,6 +233,11 @@ input.search-button {
 	font-weight: bold;
 }
 
+.menu-item-3d {
+	perspective: 240px;
+	perspective-origin: right;
+}
+
 .menu-item a {
 	color: #004999;
 	text-decoration: none;
