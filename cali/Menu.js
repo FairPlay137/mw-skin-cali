@@ -126,7 +126,7 @@ var CaliSkin = {
 
 	do_menuItemAction: function( item ) {
 		if ( document.getElementById( 'sub-menu' + item ) ) {
-			if((document.getElementById( 'sub-menu' + item ).style.display != 'block') && ( document.getElementById( 'sub-menu' + item ).hasClass('menu3d')) {
+			if((document.getElementById( 'sub-menu' + item ).style.display != 'block') && ( document.getElementById( 'sub-menu' + item ).hasClass('menu3d'))) {
 				CaliSkin.submenu_3danim_in(document.getElementById( 'sub-menu' + item ));
 			}
 			document.getElementById( 'sub-menu' + item ).style.display = 'block';
