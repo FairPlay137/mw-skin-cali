@@ -297,7 +297,7 @@ var CaliSkin = {
 		CaliSkin._hide_timer = setTimeout( function() {
 			CaliSkin.show_actions( el, 'hide' );
 		}, 500 );
-	}
+	},
 	
 	submenu_3danim: function( elem ) { 
 		var rot = 90;
