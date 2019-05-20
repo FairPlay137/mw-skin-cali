@@ -302,13 +302,13 @@ var CaliSkin = {
 	
 	submenu_3danim_in: function( elem ) { 
 		var rot = -90;
-		var xzofforig = -50;
-		var negxzofforig = -xzofforig;
+		var xzofforig = -65;
+		var x2doffset = -xzofforig;
 		var xoff = xzofforig*(Math.cos(-(rot/180)*Math.PI));
 		var zoff = xzofforig*(Math.sin(-(rot/180)*Math.PI));
 		var opac = 1+(rot/90);
 		elem.style.opacity = opac;
-		elem.style.transform = 'rotateY('+rot.toString()+'deg) translateX('+xoff.toString()+'px) translateZ('+zoff.toString()+'px) translate('+negxzofforig.toString()+'px, 0)';
+		elem.style.transform = 'rotateY('+rot.toString()+'deg) translateX('+xoff.toString()+'px) translateZ('+zoff.toString()+'px) translate('+x2doffset.toString()+'px, 0)';
 		var id = setInterval(frame, 5);
 		function frame() {
 			xoff = xzofforig*(Math.cos((rot/180)*Math.PI));
@@ -321,7 +321,7 @@ var CaliSkin = {
 			} else {
 				rot += 3;
 				elem.style.opacity = opac;
-				elem.style.transform = 'rotateY('+rot.toString()+'deg) translateX('+xoff.toString()+'px) translateZ('+zoff.toString()+'px) translate('+negxzofforig.toString()+'px, 0)';
+				elem.style.transform = 'rotateY('+rot.toString()+'deg) translateX('+xoff.toString()+'px) translateZ('+zoff.toString()+'px) translate('+x2doffset.toString()+'px, 0)';
 			}
 		}
 	}

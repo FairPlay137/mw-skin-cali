@@ -191,6 +191,23 @@ div.noarticletext {
 	margin: 0px 0px 5px 0px;
 }
 
+#langs-box {
+	margin: 0px 0px 5px 0px;
+	padding: 8px;
+	border: 0;
+	background-color: #e5f2ea;
+	border-radius: 10px;
+	height: auto;
+	align-content: center;
+	box-shadow: 2px 2px 5px #1117;
+}
+
+#langs-title {
+	color: #333;
+	font-size: 14px;
+	margin: 0px 0px 5px 0px;
+}
+
 input.search-field {
 	float: left;
 	height: 22px;

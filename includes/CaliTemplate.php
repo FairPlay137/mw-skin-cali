@@ -266,6 +266,12 @@ class CaliTemplate extends BaseTemplate {
 				</form>
 				<div class="cleared"></div>
 			</div>
+			<div id="langs-box">
+				<?php
+					echo $this->getLanguageBox();
+				?>
+				<div class="cleared"></div>
+			</div>
 				<div class="bottom-left-nav">
 					<?php
 					// Hook point for TTSCWikiChat (also could be used for an ad engine? We have no plans to implement ads into the official TTSC Wikis, but the engine could be used for other wikis.)
@@ -1038,4 +1044,20 @@ class CaliTemplate extends BaseTemplate {
 
 		return parent::makeListItem( $key, $item, $options );
 	}
+	
+	/**
+	 * Generate the languages box
+	 *
+	 * @return string html
+	 */
+	protected function getLanguageBox() {
+		$html = '';
+
+		if ( $this->data['language_urls'] !== false ) {
+			$html .= $this->getBox( 'lang', $this->data['language_urls'], 'otherlanguages' );
+		}
+
+		return $html;
+	}
+	
 } // end of class
