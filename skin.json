@@ -96,7 +96,8 @@
 	"config": {
 		"CaliShowHeaderBranding": true,
 		"CaliShowHeaderTabs": true,
-		"CaliSiteNoticeOutsideArticle": true
+		"CaliSiteNoticeOutsideArticle": true,
+		"CaliEnableExperimental3D": true
 	},
 	"manifest_version": 1
 }

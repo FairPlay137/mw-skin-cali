@@ -296,6 +296,23 @@ var CaliSkin = {
 			CaliSkin.show_actions( el, 'hide' );
 		}, 500 );
 	}
+	
+	submenu_3danim: function( elem ) { 
+		var rot = 90;
+		var zofforig = -64;
+		var zoff = zofforig*(rot/90);
+		var id = setInterval(frame, 5);
+		function frame() {
+			zoff = zofforig*(rot/90);
+			if (rot == 0) {
+				clearInterval(id);
+				elem.style.transform = '';
+			} else {
+				rot--; 
+				elem.style.transform = 'rotateY('+rot.toString()+'deg) translateZ('+zoff.toString()+'px)';
+			}
+		}
+	}
 };
 
 $( function() {
