@@ -302,23 +302,26 @@ var CaliSkin = {
 	
 	submenu_3danim_in: function( elem ) { 
 		var rot = -90;
-		var zofforig = -55;
-		var zoff = zofforig*(rot/90);
+		var xzofforig = -50;
+		var negxzofforig = -xzofforig;
+		var xoff = xzofforig*(Math.cos(-(rot/180)*Math.PI));
+		var zoff = xzofforig*(Math.sin(-(rot/180)*Math.PI));
 		var opac = 1+(rot/90);
 		elem.style.opacity = opac;
 		elem.style.transform = 'rotateY('+rot.toString()+'deg) translateZ('+zoff.toString()+'px)';
 		var id = setInterval(frame, 5);
 		function frame() {
-			zoff = zofforig*(rot/90);
+			xoff = xzofforig*(Math.cos((rot/180)*Math.PI));
+			zoff = xzofforig*(Math.sin((rot/180)*Math.PI));
 			opac = 1+(rot/90);
-			if (rot == 0) {
+			if (rot >= 0) {
 				clearInterval(id);
 				elem.style.opacity = '';
 				elem.style.transform = '';
 			} else {
-				rot += 3; 
+				rot += 3;
 				elem.style.opacity = opac;
-				elem.style.transform = 'rotateY('+rot.toString()+'deg) translateZ('+zoff.toString()+'px)';
+				elem.style.transform = 'rotateY('+rot.toString()+'deg) translateX('+xoff.toString()+'px) translateZ('+zoff.toString()+'px) translate('+negxzofforig.toString()+', 0)';
 			}
 		}
 	}
