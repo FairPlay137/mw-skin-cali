@@ -503,7 +503,7 @@ class CaliTemplate extends BaseTemplate {
 
 		if ( isset( $this->navmenu[$id]['children'] ) ) {
 			if ( $level ) {
-				$menu_output .= '<div class="sub-menu'.( ( $this->config->get( 'CaliEnableExperimental3D' )) ) ? ' menu3d' : '' ).'" id="sub-menu' . $last_count . '" style="display:none;">';
+				$menu_output .= '<div class="sub-menu'.( ( $this->config->get( 'CaliEnableExperimental3D' )) ? ' menu3d' : '' ).'" id="sub-menu' . $last_count . '" style="display:none;">';
 			}
 			foreach ( $this->navmenu[$id]['children'] as $child ) {
 				$menu_output .= "\n\t\t\t\t" . '<div class="' . ( $level ? 'sub-' : '' ) . 'menu-item' .
