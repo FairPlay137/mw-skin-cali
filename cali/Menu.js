@@ -308,7 +308,7 @@ var CaliSkin = {
 		var zoff = xzofforig*(Math.sin(-(rot/180)*Math.PI));
 		var opac = 1+(rot/90);
 		elem.style.opacity = opac;
-		elem.style.transform = 'rotateY('+rot.toString()+'deg) translateZ('+zoff.toString()+'px)';
+		elem.style.transform = 'rotateY('+rot.toString()+'deg) translateX('+xoff.toString()+'px) translateZ('+zoff.toString()+'px) translate('+negxzofforig.toString()+'px, 0)';
 		var id = setInterval(frame, 5);
 		function frame() {
 			xoff = xzofforig*(Math.cos((rot/180)*Math.PI));
@@ -321,7 +321,7 @@ var CaliSkin = {
 			} else {
 				rot += 3;
 				elem.style.opacity = opac;
-				elem.style.transform = 'rotateY('+rot.toString()+'deg) translateX('+xoff.toString()+'px) translateZ('+zoff.toString()+'px) translate('+negxzofforig.toString()+', 0)';
+				elem.style.transform = 'rotateY('+rot.toString()+'deg) translateX('+xoff.toString()+'px) translateZ('+zoff.toString()+'px) translate('+negxzofforig.toString()+'px, 0)';
 			}
 		}
 	}
