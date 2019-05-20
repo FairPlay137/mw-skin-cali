@@ -126,10 +126,11 @@ var CaliSkin = {
 
 	do_menuItemAction: function( item ) {
 		if ( document.getElementById( 'sub-menu' + item ) ) {
+			console.log("showing sub-menu" + item);
 			document.getElementById( 'sub-menu' + item ).style.display = 'block';
-			CaliSkin.submenu_3danim(document.getElementById( 'sub-menu' + item ));
 			CaliSkin.displayed_menus.push( 'sub-menu' + item );
 			CaliSkin.last_displayed = 'sub-menu' + item;
+			CaliSkin.submenu_3danim(document.getElementById( 'sub-menu' + item ));
 		}
 	},
 
