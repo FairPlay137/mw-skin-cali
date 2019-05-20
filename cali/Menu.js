@@ -126,11 +126,10 @@ var CaliSkin = {
 
 	do_menuItemAction: function( item ) {
 		if ( document.getElementById( 'sub-menu' + item ) ) {
-			console.log("showing sub-menu" + item);
+			CaliSkin.submenu_3danim(document.getElementById( 'sub-menu' + item ));
 			document.getElementById( 'sub-menu' + item ).style.display = 'block';
 			CaliSkin.displayed_menus.push( 'sub-menu' + item );
 			CaliSkin.last_displayed = 'sub-menu' + item;
-			CaliSkin.submenu_3danim(document.getElementById( 'sub-menu' + item ));
 		}
 	},
 
@@ -310,7 +309,7 @@ var CaliSkin = {
 				clearInterval(id);
 				elem.style.transform = '';
 			} else {
-				rot--; 
+				rot -= 2; 
 				elem.style.transform = 'rotateY('+rot.toString()+'deg) translateZ('+zoff.toString()+'px)';
 			}
 		}
