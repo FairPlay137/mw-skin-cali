@@ -1054,7 +1054,7 @@ class CaliTemplate extends BaseTemplate {
 		$html = '';
 
 		if ( $this->data['language_urls'] !== false ) {
-			$html .= $this->getBox( 'lang', $this->data['language_urls'], 'otherlanguages' );
+			$html .= $this->data['language_urls'];
 		}
 
 		return $html;
