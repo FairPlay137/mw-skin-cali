@@ -126,7 +126,7 @@ var CaliSkin = {
 
 	do_menuItemAction: function( item ) {
 		if ( document.getElementById( 'sub-menu' + item ) ) {
-			if(document.getElementById( 'sub-menu' + item ).style.display != 'block') {
+			if((document.getElementById( 'sub-menu' + item ).style.display != 'block') && mw.config.get( 'wgCaliEnableExperimental3D' )) {
 				CaliSkin.submenu_3danim(document.getElementById( 'sub-menu' + item ));
 			}
 			document.getElementById( 'sub-menu' + item ).style.display = 'block';
@@ -316,7 +316,7 @@ var CaliSkin = {
 				elem.style.opacity = '';
 				elem.style.transform = '';
 			} else {
-				rot += 2; 
+				rot += 3; 
 				elem.style.opacity = opac;
 				elem.style.transform = 'rotateY('+rot.toString()+'deg) translateZ('+zoff.toString()+'px)';
 			}
