@@ -15,11 +15,15 @@ body {
  * Revert https://gerrit.wikimedia.org/r/#/c/151395/ because it's ugly and
  * unwanted for this skin, but we get it as a "nice" side-effect of loading
  * MonoBook's main RL module...
+ * 
+ * Additionally, it's a hack for the VisualEditor page preview so text isn't centered
  */
 div.mw-body-content {
 	border: 0;
 	margin: 0;
 	padding: 0;
+	line-height: 1.5em;
+	text-align: left;
 }
 
 #container {
