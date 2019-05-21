@@ -136,7 +136,7 @@ class CaliTemplate extends BaseTemplate {
 		</div>
 		<?php if ( $more_wikis ) { ?>
 		<div id="tp-more-category">
-			<div class="mw-skin-cali-button more-wikis-button"><span><?php echo wfMessage( 'cali-more-wikis' )->plain() ?></span></div>
+			<div class="more-wikis-tab"><span><?php echo wfMessage( 'cali-more-wikis' )->plain() ?></span></div>
 		</div>
 		<div id="more-wikis-menu" style="display:none;">
 		<?php

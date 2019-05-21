@@ -63,6 +63,22 @@ div.noarticletext {
 }
 
 /** Buttons **/
+.more-wikis-tab {
+	float: initial;
+	color: #fff;
+	height: 31px;
+	display: inline-block;
+	font-size: 9.5pt;
+	padding: 2px 1em;
+	font-family: sans-serif;
+	vertical-align: middle;
+	line-height: 31px;
+}
+
+.more-wikis-tab:hover {
+	background: #EF574F;
+}
+
 #more-wikis-menu {
 	background-color: #FFF;
 	border-bottom: 1px solid #D4DFD7;
