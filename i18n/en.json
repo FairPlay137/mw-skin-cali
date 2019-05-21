@@ -17,6 +17,7 @@
 	"cali-featuredimage": "Featured Image",
 	"cali-featureduser": "Featured User",
 	"cali-more-actions": "More...",
+	"cali-more-wikis": "More Wikis",
 	"cali-not-logged-in": "Guest",
 	"cali-pagehistory": "Check this page's history",
 	"cali-pages-can-be-edited": "This page can be <i>edited</i>.<br />\n\nDo you think this page is missing something? Spotted a mistake somewhere?<br />\n\n<b>Fix it!</b>",
@@ -45,5 +46,6 @@
 	"cali-tooltip-socialprofile-sendmessage": "Send this user a message.",
 	"cali-tooltip-socialprofile-sendgift": "Send this user a gift.",
 	"cali-uploadfiles": "Upload file(s)...",
+	"morewikis": "",
 	"skincali-altsitenoticelocation-preference": "Use alternative site notice location (Cali)"
 }
