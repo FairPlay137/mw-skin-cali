@@ -470,7 +470,7 @@ class CaliTemplate extends BaseTemplate {
 	 * @return Array: "More Wikis" menu
 	 */
 	private function buildMoreWikis() {
-		$messageKey = 'cali-morewikis';
+		$messageKey = 'morewikis';
 		$message = trim( wfMessage( $messageKey )->text() );
 
 		if ( wfMessage( $messageKey )->isDisabled() ) {
