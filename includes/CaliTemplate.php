@@ -106,6 +106,7 @@ class CaliTemplate extends BaseTemplate {
 		}
 		
 		$more_wikis = $this->buildMoreWikis();
+		$navtabs = $this->buildNavtabs();
 		
 		$personalTools = $this->getPersonalTools();
 		
