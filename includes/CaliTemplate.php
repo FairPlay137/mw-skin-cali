@@ -163,17 +163,15 @@ class CaliTemplate extends BaseTemplate {
 		<?php } else { ?>
 		<div id="tp-navtab-container">
 		<?php } ?>
-			<div class="navtab"><span><?php echo wfMessage( 'cali-more-wikis' )->plain() ?></span></div>
+			<?php
+			$x = 1;
+			foreach ( $navtabs as $link ) {
+				echo "<div class=\"navtab\"><a href=\"{$link['href']}\">{$link['text']}</a></div>\n";
+				$x++;
+			}
+			?>
 		</div>
-		<div id="more-wikis-menu" style="display:none;">
-		<?php
-		$x = 1;
-		foreach ( $navtabs as $link ) {
-			echo "<div class=\"navtab\"><a href=\"{$link['href']}\">{$link['text']}</a></div>\n";
-			$x++;
-		}
-		?>
-		</div><!-- #navtab-container -->
+		
 		<?php } // if $navtabs ?>
 		<div id="wiki-login">
 			<div class="user-icon-container user-dmenu">
