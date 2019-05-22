@@ -85,7 +85,6 @@ div.noarticletext {
 
 .navtab {
 	float: initial;
-	color: #fff;
 	height: 31px;
 	display: inline-block;
 	font-size: 9.5pt;
@@ -97,6 +96,11 @@ div.noarticletext {
 
 .navtab:hover {
 	background: #EF574F;
+}
+
+.navtab a {
+	color: #fff;
+	text-decoration: none;
 }
 
 #more-wikis-menu {
