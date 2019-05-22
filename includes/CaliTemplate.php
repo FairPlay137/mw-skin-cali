@@ -156,6 +156,24 @@ class CaliTemplate extends BaseTemplate {
 		?>
 		</div><!-- #more-wikis-menu -->
 		<?php } // if $more_wikis ?>
+		<?php if ( $navtabs ) { ?>
+		<?php if ( $more_wikis ) { ?>
+		<div id="tp-navtab-container2">
+		<?php } else { ?>
+		<div id="tp-navtab-container">
+		<?php } ?>
+			<div class="navtab"><span><?php echo wfMessage( 'cali-more-wikis' )->plain() ?></span></div>
+		</div>
+		<div id="more-wikis-menu" style="display:none;">
+		<?php
+		$x = 1;
+		foreach ( $navtabs as $link ) {
+			echo "<div class=\"navtab\"><a href=\"{$link['href']}\">{$link['text']}</a></div>\n";
+			$x++;
+		}
+		?>
+		</div><!-- #navtab-container -->
+		<?php } // if $navtabs ?>
 		<div id="wiki-login">
 			<div class="user-icon-container user-dmenu">
 				<span id="username-top">
@@ -488,6 +506,32 @@ class CaliTemplate extends BaseTemplate {
 		}
 
 		return $moreWikis;
+	}
+	
+	/**
+	 * Generate a navtabs array for use in the Navtab menus
+	 *
+	 * @return Array: "More Wikis" menu
+	 */
+	private function buildNavtabs() {
+		$messageKey = 'cali-navtabs';
+		$message = trim( wfMessage( $messageKey )->text() );
+
+		if ( wfMessage( $messageKey )->isDisabled() ) {
+			return array();
+		}
+
+		$lines = array_slice( explode( "\n", $message ), 0, 150 );
+
+		if ( count( $lines ) == 0 ) {
+			return array();
+		}
+
+		foreach ( $lines as $line ) {
+			$navTabs[] = $this->parseItem( $line );
+		}
+
+		return $navTabs;
 	}
 
 
