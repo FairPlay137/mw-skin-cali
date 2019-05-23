@@ -296,7 +296,7 @@ class CaliTemplate extends BaseTemplate {
 					$dykTemplate = Title::makeTitle( NS_TEMPLATE, 'Didyouknow' );
 					if ( $dykTemplate->exists() ) {
 					?>
-						<div class="bottom-left-nav-container">
+						<div class="bottom-left-nav-container" id="cali-didyouknow">
 							<h2><?php echo wfMessage( 'cali-didyouknow' )->plain() ?></h2>
 							<?php echo $wgOut->parse( '{{Didyouknow}}' ) ?>
 						</div>
@@ -310,13 +310,13 @@ class CaliTemplate extends BaseTemplate {
 							'<randomimagebycategory width="200" categories="Featured Image" />',
 							false
 						);
-						echo '<div class="bottom-left-nav-container">
+						echo '<div class="bottom-left-nav-container" id="cali-featuredimage">
 						<h2>' . wfMessage( 'cali-featuredimage' )->plain() . '</h2>' .
 						$randomImage . '</div>';
 					}
 
 					if ( class_exists( 'RandomFeaturedUser' ) ) {
-						echo '<div class="bottom-left-nav-container">
+						echo '<div class="bottom-left-nav-container" id="cali-featureduser">
 							<h2>' . wfMessage( 'cali-featureduser' )->plain() . '</h2>' .
 							$this->get( 'cali-randomfeatureduser' ) . '</div>';
 					}
@@ -1014,7 +1014,7 @@ class CaliTemplate extends BaseTemplate {
 		}
 
 		if ( count( $language_urls ) ) {
-			$output = '<div class="bottom-left-nav-container">';
+			$output = '<div class="bottom-left-nav-container" id="cali-langlinks">';
 			$output .= '<h2>' . wfMessage( 'otherlanguages' )->plain() . '</h2>';
 			$output .= '<div class="interlanguage-links">' . "\n" . '<ul>' . "\n";
 			foreach ( $language_urls as $langlink ) {
