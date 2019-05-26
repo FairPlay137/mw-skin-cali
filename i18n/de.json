@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [ "FairPlay137" ]
+	},
+	"skinname-cali": "Cali",
+	"cali-desc": "Ein Nimbus-basierter Skin für die TTSCpedia und andere MediaWiki-basierte TTSC-Projekte.",
+	"cali-advertise": "Werben",
+	"cali-advertise-url": "",
+	"cali-back-to-top": "Zurück nach oben",
+	"cali-branding": "Die TTS-Community",
+	"cali-contribute": "Beitragen",
+	"cali-createpageuw": "Erstelle eine Seite...",
+	"cali-didyouknow": "Wusstest du?",
+	"cali-editthispage": "Bearbeite diese Seite",
+	"cali-featuredarticle": "Gesponserter Artikel",
+	"cali-featuredimage": "Gesponserter Image",
+	"cali-featureduser": "Empfohlener Benutzer",
+	"cali-more-actions": "Mehr...",
+	"cali-more-wikis": "Mehr Wikis",
+	"cali-not-logged-in": "Gast",
+	"cali-pagehistory": "Überprüfen Sie den Verlauf dieser Seite",
+	"cali-pages-can-be-edited": "Diese Seite kann <i>bearbeitet</i> werden.<br />\n\nGlaubst du, auf dieser Seite fehlt etwas? Irgendwo einen Fehler gefunden?<br />\n\n<b>Repariere es!</b>",
+	"cali-recent-contributors": "Aktuelle Mitwirkende",
+	"cali-recent-contributors-info": "Diese Personen haben kürzlich zu dieser Seite beigetragen:",
+	"cali-search": "Suche $1...",
+	"cali-search-label-advancedsearch-link": "Fortgeschritten...",
+	"cali-search-label-wbitemsonly": "Nur Artikelsuche",
+	"cali-socialprofile-blocked-badge": "GESPERRT",
+	"cali-talkpage": "Überprüfen Sie die Diskussionsseite",
+	"cali-uploadfiles": "Datei hochladen...",
+	"skincali-altsitenoticelocation-preference": "Verwenden Sie einen alternativen Standort für die Site Notice (Cali)"
+}
