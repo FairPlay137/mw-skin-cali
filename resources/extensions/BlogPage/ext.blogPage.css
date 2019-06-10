@@ -3,6 +3,26 @@
 	border-bottom: none;
 }
 
+#blog-page-container .blog-byline {
+	margin: 2px 0 8px 0;
+	display: inline-block;
+}
+
+#blog-page-container .blog-byline-last-edited {
+	float: right;
+}
+
+#blog-page-container .mw-parser-output .vote-box {
+	display: inline-block;
+	height: 12px;
+	padding: 2px 0px 8px;
+}
+
+#blog-page-container .mw-parser-output .vote-action {
+	display: inline-block;
+	position: absolute;
+}
+
 #blog-page-middle h1.page-title {
 	margin: 0px !important;
 }
@@ -13,4 +33,9 @@
 	clear: both;
 	margin-top: 1em;
 	padding: 5px;
+}
+
+#blog-page-left {
+	top: 48px;
+	width: 24%;
 }
