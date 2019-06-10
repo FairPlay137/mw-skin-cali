@@ -4,12 +4,13 @@
 }
 
 #blog-page-container .blog-byline {
-	margin: 2px 0 8px 0;
+	margin: 0 0 8px 0;
 	display: inline-block;
 }
 
 #blog-page-container .blog-byline-last-edited {
 	float: right;
+	font-style: italic;
 }
 
 #blog-page-container .mw-parser-output .vote-box {
@@ -21,6 +22,10 @@
 #blog-page-container .mw-parser-output .vote-action {
 	display: inline-block;
 	position: absolute;
+}
+
+#blog-page-middle {
+	display: inline-block;
 }
 
 #blog-page-middle h1.page-title {
@@ -38,4 +43,21 @@
 #blog-page-left {
 	top: 48px;
 	width: 24%;
+}
+
+#blog-page-left .blog-left-units {
+    background-color: #f2f7fc;
+    border: 1px solid #dcdcdc;
+    box-shadow: 2px 2px 3px #0007;
+    border-radius: 4px;
+}
+
+#blog-page-right {
+	width: 22%;
+	position: relative;
+	top: 256px;
+    background-color: #f2f7fc;
+    border: 1px solid #dcdcdc;
+    box-shadow: 2px 2px 3px #0007;
+    border-radius: 4px;
 }
