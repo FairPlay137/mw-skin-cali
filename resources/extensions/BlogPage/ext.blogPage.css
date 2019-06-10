@@ -6,11 +6,17 @@
 #blog-page-container .blog-byline {
 	margin: 0 0 8px 0;
 	display: inline-block;
+	position: relative;
+	left: 16px;
+	bottom: 8px;
 }
 
 #blog-page-container .blog-byline-last-edited {
 	float: right;
 	font-style: italic;
+	position: relative;
+	right: 16px;
+	bottom: 8px;
 }
 
 #blog-page-container .mw-parser-output .vote-box {
