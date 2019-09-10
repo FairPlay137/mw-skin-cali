@@ -366,51 +366,59 @@ input.search-button {
 .read-more-container {
 	margin: 0 !important;
 	position: relative;
-    background-color: #f7f9f8;
-    border-left: 1px solid #d4dfd7;
-    border-right: 1px solid #d4dfd7;
-    border-bottom: 1px solid #d4dfd7;
-    min-height: 140px;
+	background-color: #f7f9f8;
+	border-left: 1px solid #d4dfd7;
+	border-right: 1px solid #d4dfd7;
+	border-bottom: 1px solid #d4dfd7;
+	min-height: 140px;
 }
 
 .read-more-container h2 {
 	font-size: 16px !important;
-    color: #687f79 !important;
-    margin: 0;
-    padding: 0 0 5px 0 !important;
-    border-bottom: none !important;
-    text-transform: none !important;
-    letter-spacing: 0 !important;
+	color: #687f79 !important;
+	margin: 0;
+	padding: 0 0 5px 0 !important;
+	border-bottom: none !important;
+	text-transform: none !important;
+	letter-spacing: 0 !important;
 }
 
 .read-more-container p {
-    margin: 0 0 6px 0;
-    font-size: 11px;
-    line-height: 12px;
+	margin: 0 0 6px 0;
+	font-size: 11px;
+	line-height: 12px;
 }
 
 .ext-related-articles-card-list .ext-related-articles-card {
-    background-color: #fff;
-    box-sizing: border-box;
-    margin: 0;
-    height: 80px;
-    position: relative;
-    width: 100%;
-    border: 1px solid rgba(0,0,0,0.2);
+	background-color: #fff;
+	box-sizing: border-box;
+	margin: 0;
+	height: 80px;
+	position: relative;
+	width: 100%;
+	border: 1px solid rgba(0,0,0,0.2);
 }
 
 @media (min-width: 1080px) {
 	.ext-related-articles-card-list .ext-related-articles-card {
-	    margin-right: 1%;
-	    margin-bottom: 10px;
-	    width: 32.66666667%;
+		margin-right: 1%;
+		margin-bottom: 10px;
+		width: 32.66666667%;
 	}
 }
 
 @media (min-width: 720px) and (max-width: 1080px) {
 	.ext-related-articles-card-list .ext-related-articles-card {
-	    margin-right: 1%;
-	    margin-bottom: 10px;
-	   	width: 49%;
+		margin-right: 1%;
+		margin-bottom: 10px;
+		width: 49%;
 	}
+}
+
+/* Other UI hacks */
+
+.mw-rcfilters-ui-overlay,
+.ve-ui-overlay {
+	text-align: initial;
+	font-size: initial;
 }

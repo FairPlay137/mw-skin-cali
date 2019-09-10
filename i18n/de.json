@@ -27,6 +27,18 @@
 	"cali-search-label-wbitemsonly": "Nur Artikelsuche",
 	"cali-socialprofile-blocked-badge": "GESPERRT",
 	"cali-talkpage": "Überprüfen Sie die Diskussionsseite",
+		"cali-tooltip-socialprofile-editprofile": "Edit your profile details",
+	"cali-tooltip-socialprofile-uploadavatar": "Upload a new avatar",
+	"cali-tooltip-socialprofile-mywatchlist": "View your watchlist.",
+	"cali-tooltip-socialprofile-contributions": "View this user's contributions to this wiki.",
+	"cali-tooltip-socialprofile-userpage": "View this user's wiki userpage.",
+	"cali-tooltip-socialprofile-socialprofile": "View this user's profile page.",
+	"cali-tooltip-socialprofile-addasfriend": "Send this user a friend request.",
+	"cali-tooltip-socialprofile-removeasfriend": "Remove this user as a friend.",
+	"cali-tooltip-socialprofile-addasfoe": "Send this user a foe request.",
+	"cali-tooltip-socialprofile-removeasfoe": "Remove this user as a foe.",
+	"cali-tooltip-socialprofile-sendmessage": "Send this user a message.",
+	"cali-tooltip-socialprofile-sendgift": "Send this user a gift.",
 	"cali-uploadfiles": "Datei hochladen...",
 	"skincali-altsitenoticelocation-preference": "Verwenden Sie einen alternativen Standort für die Site Notice (Cali)"
 }
