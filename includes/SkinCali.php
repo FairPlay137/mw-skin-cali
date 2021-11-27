@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 /**
  * Inherit main code from SkinTemplate, set the CSS and template filter.
  * @ingroup Skins
