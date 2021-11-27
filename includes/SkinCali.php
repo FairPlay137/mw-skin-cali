@@ -172,7 +172,6 @@ class SkinCali extends SkinTemplate {
 	 * @return ParserOutput
 	 */
 	public function parseRandomFeaturedUserTag( $text ) {
-		global $wgParser;
 
 		$out = $this->getOutput();
 		if ( is_null( $out->getTitle() ) ) {
@@ -181,7 +180,8 @@ class SkinCali extends SkinTemplate {
 
 		$popts = $out->parserOptions();
 
-		$parserOutput = $wgParser->getFreshParser()->parse(
+		$parser = MediaWikiServices::getInstance()->getParser();
+		$parserOutput = $parser->getFreshParser()->parse(
 			$text, $out->getTitle(), $popts,
 			false, true, $out->getRevisionId()
 		);

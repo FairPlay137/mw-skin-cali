@@ -302,7 +302,7 @@ class CaliTemplate extends BaseTemplate {
 					?>
 						<div class="bottom-left-nav-container" id="cali-didyouknow">
 							<h2><?php echo wfMessage( 'cali-didyouknow' )->plain() ?></h2>
-							<?php echo $wgOut->parse( '{{Didyouknow}}' ) ?>
+							<?php echo $wgOut->parseAsInterface( '{{Didyouknow}}' ) ?>
 						</div>
 					<?php
 					}
@@ -310,7 +310,7 @@ class CaliTemplate extends BaseTemplate {
 					echo $this->getInterlanguageLinksBox();
 
 					if ( class_exists( 'RandomImageByCategory' ) ) {
-						$randomImage = $wgOut->parse(
+						$randomImage = $wgOut->parseAsInterface(
 							'<randomimagebycategory width="200" categories="Featured Image" />',
 							false
 						);
@@ -837,10 +837,9 @@ class CaliTemplate extends BaseTemplate {
 	 * @return $footer The generated footer, including recent editors
 	 */
 	function footer() {
-		global $wgMemc, $wgUploadPath;
+		global $wgUploadPath;
 
 		$titleObj = $this->getSkin()->getTitle();
-		$title = Title::makeTitle( $titleObj->getNamespace(), $titleObj->getText() );
 		$pageTitleId = $titleObj->getArticleID();
 		$main_page = Title::newMainPage();
 
@@ -850,6 +849,10 @@ class CaliTemplate extends BaseTemplate {
 		}
 		$footer = '';
 
+		$services = MediaWikiServices::getInstance();
+		$cache = $services->getMainWANObjectCache();
+		$linkRenderer = $services->getLinkRenderer();
+
 		// Show the list of recent editors and their avatars if the page is in
 		// one of the allowed namespaces and it is not the main page
 		if (
@@ -857,37 +860,42 @@ class CaliTemplate extends BaseTemplate {
 			( $pageTitleId != $main_page->getArticleID() )
 		)
 		{
-			$key = $wgMemc->makeKey( 'recenteditors', 'list', $pageTitleId );
-			$data = $wgMemc->get( $key );
+			$key = $cache->makeKey( 'recenteditors', 'list', $pageTitleId );
+			$data = $cache->get( $key );
 			$editors = array();
 			if ( !$data ) {
-				wfDebug( __METHOD__ . ": Loading recent editors for page {$pageTitleId} from wiki database...\n" );
-				$dbw = wfGetDB( DB_MASTER );
+				wfDebug( __METHOD__ . ": Loading recent editors for page {$pageTitleId} from DB...\n" );
+				$dbw = wfGetDB( DB_PRIMARY );
+
 				$res = $dbw->select(
-					'revision',
-					array( 'DISTINCT rev_user', 'rev_user_text' ),
-					array(
-						'rev_page' => $pageTitleId,
-						'rev_user <> 0',
-						"rev_user_text <> 'MediaWiki default'"
-					),
+					[ 'revision_actor_temp', 'revision', 'actor' ],
+					[ 'DISTINCT revactor_actor' ],
+					[
+						'revactor_page' => $pageTitleId,
+						'actor_user IS NOT NULL',
+						"actor_name <> 'MediaWiki default'"
+					],
 					__METHOD__,
-					array( 'ORDER BY' => 'rev_user_text ASC', 'LIMIT' => 8 )
+					[ 'ORDER BY' => 'actor_name ASC', 'LIMIT' => 8 ],
+					[
+						'actor' => [ 'JOIN', 'actor_id = revactor_actor' ],
+						'revision_actor_temp' => [ 'JOIN', 'revactor_rev = rev_id' ]
+					]
 				);
 
 				foreach ( $res as $row ) {
 					// Prevent blocked users from appearing
-					$user = User::newFromId( $row->rev_user );
-					if ( !$user->isBlocked() ) {
-						$editors[] = array(
-							'user_id' => $row->rev_user,
-							'user_name' => $row->rev_user_text
-						);
+					$user = User::newFromActorId( $row->revactor_actor );
+					if ( !$user->getBlock() ) {
+						$editors[] = [
+							'user_id' => $user->getId(),
+							'user_name' => $user->getName()
+						];
 					}
 				}
 
-				// Cache in memcached for five minutes
-				$wgMemc->set( $key, $editors, 60 * 5 );
+				// Cache for five minutes
+				$cache->set( $key, $editors, 60 * 5 );
 			} else {
 				wfDebug( __METHOD__ . ": Loading recent editors for page {$pageTitleId} from cache...\n" );
 				$editors = $data;
@@ -969,6 +977,9 @@ class CaliTemplate extends BaseTemplate {
 			foreach ( $links as $link ) {
 				$footer .= $this->get( $link );
 				$footer .= "\n";
+				if ( $link === 'copyright' ) {
+					$footer .= '<br />';
+				}
 			}
 		}
 		$footer .= '<br />';

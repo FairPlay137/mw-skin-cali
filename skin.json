@@ -7,6 +7,9 @@
 	"license-name": "GPL-3.0-or-later",
 	"descriptionmsg": "cali-desc",
 	"type": "skin",
+	"requires": {
+		"MediaWiki": ">= 1.32.0"
+	},
 	"DefaultUserOptions": {
 		"skincali-altsitenoticelocation": 0
 	},
