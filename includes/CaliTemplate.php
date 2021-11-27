@@ -16,6 +16,7 @@
 if ( !defined( 'MEDIAWIKI' ) ) {
 	die( -1 );
 }
+use MediaWiki\MediaWikiServices;
 
 /**
  * Main skin class.
@@ -78,6 +79,9 @@ class CaliTemplate extends BaseTemplate {
 		$this->skin = $this->data['skin'];
 
 		$user = $this->skin->getUser();
+		$services = MediaWikiServices::getInstance();
+		$contLang = $services->getContentLanguage();
+		$linkRenderer = $services->getLinkRenderer();
 
 		$register_link = SpecialPage::getTitleFor( 'Userlogin', 'signup' );
 		$login_link = SpecialPage::getTitleFor( 'Userlogin' );

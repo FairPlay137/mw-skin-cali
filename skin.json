@@ -1,10 +1,10 @@
 {
 	"name": "Cali",
-	"version": "0.9.0",
+	"version": "0.9.1",
 	"author": [
 		"FairPlay137"
 	],
-	"license-name": "GPL-2.0-or-later",
+	"license-name": "GPL-3.0-or-later",
 	"descriptionmsg": "cali-desc",
 	"type": "skin",
 	"DefaultUserOptions": {
